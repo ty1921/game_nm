@@ -581,7 +581,9 @@
 		   {
 		      var iptv_from = window.localStorage.getItem('iptv_from') || '';
 
-		      if( iptv_from == 'act' )
+		      console.log('iptv_from=' + iptv_from);
+
+		      /*if( iptv_from == 'act' )
 		      {
 		      		console.log('http: 1 csInterface.finish');
 
@@ -592,7 +594,10 @@
 		      		console.log('http: 2 csInterface.goBack');
 
 		      		csInterface.goBack();
-		      }
+		      }*/
+
+
+		      window.location.href = '../main.php';
 
 	      	return true;
 		   }

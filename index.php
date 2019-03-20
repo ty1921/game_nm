@@ -2,6 +2,9 @@
 
 error_reporting( E_ALL && ~E_NOTICE );
 
+$datas = json_encode( $_REQUEST );
+
+
 ?>
 
 <!DOCTYPE html>
@@ -78,6 +81,8 @@ if( game_id > 0 )
 
     window.localStorage.setItem( 'iptvGID' , game_id );
 
+    console.log('iptv_from  1111111111 ' );
+
     backUrl = './details.php';
 }
 else
@@ -94,6 +99,8 @@ else
 
         iptv_from = 'act';
 
+        console.log('iptv_from  22222222 ' );
+
         backUrl = './act/312.php';
     }
 
@@ -105,10 +112,17 @@ else
     {
     	$('#debug').html( $('#debug').html() + '--进入植树节' );
 
+        console.log('iptv_from  333333333 ' );
+
         backUrl = './act/312.php';
     }
 }
 
+var datas = '<?php echo $datas; ?>';
+
+console.log('REQUEST=' + datas);
+
+console.log('setItem iptv_from=' + iptv_from);
 
 
 //转存来源标志位
