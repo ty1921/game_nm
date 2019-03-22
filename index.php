@@ -56,12 +56,12 @@ $datas = json_encode( $_REQUEST );
 
 <script type="text/javascript">
 
-$('#debug').html( $('#debug').html() + '<br>- getToken开始' );
+//$('#debug').html( $('#debug').html() + '<br>- getToken开始' );
 
 //获取用户itv机顶盒账号（如itv99999）,并上传该账号入库，返回user表的id（数字）
 getToken();
 
-$('#debug').html( $('#debug').html() + '<br>- getToken结束' );
+//$('#debug').html( $('#debug').html() + '<br>- getToken结束' );
     
 
 
@@ -80,6 +80,8 @@ if( game_id > 0 )
 	$('#debug').html( $('#debug').html() + '<br>- 进入游戏' + game_id );
 
     window.localStorage.setItem( 'iptvGID' , game_id );
+
+    iptv_from = 'act_game';
 
     console.log('iptv_from  1111111111 ' );
 

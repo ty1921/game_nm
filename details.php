@@ -171,12 +171,31 @@ date_default_timezone_set('PRC');
 		   //返回
 		   if( val == 8 )
 		   {
+		   		var iptv_from = window.localStorage.getItem('iptv_from') || '';
+
+		      	//console.log('iptv_from=' + iptv_from);
+
+				if( iptv_from == 'act_game' )
+				{
+						console.log('http: detail finish');
+
+						csInterface.finish();
+				}
+				else
+				{
+						console.log('http: detail goBack');
+
+						csInterface.goBack();
+				}
+
+				/*
 		      //$('#debug').html( $('#debug').html() + "<br> <br>  成功拦截返回.window.onkeydown");
 		      
 		      csInterface.goBack();
 
 		      //return true表示拦截自己处理了 return false表示自己不拦截处理
 		      //window.history.back();
+		      */
 
 		      return true;
 		   }
